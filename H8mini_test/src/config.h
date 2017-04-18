@@ -11,13 +11,13 @@
 
 // rate in deg/sec
 // for low rates ( acro mode)
-#define MAX_RATE 180.0f
-#define MAX_RATEYAW 180.0f
+#define MAX_RATE 900.0f
+#define MAX_RATEYAW 900.0f
 
 // multiplier for high rates
 // devo/module uses high rates only
-#define HIRATEMULTI 2.0f
-#define HIRATEMULTIYAW 2.0f
+#define HIRATEMULTI 1.0f
+#define HIRATEMULTIYAW 1.0f
 
 // max angle for level mode (in degrees)
 // low and high rates(angle?)
@@ -32,14 +32,14 @@
 
 
 // disable inbuilt expo functions
-#define DISABLE_EXPO
+// #define DISABLE_EXPO
 
 // use if your tx has no expo function
 // also comment out DISABLE_EXPO to use
 // -1 to 1 , 0 = no exp
 // positive = less sensitive near center 
-#define EXPO_XY 0.3f
-#define EXPO_YAW 0.0f
+#define EXPO_XY 0.7f
+#define EXPO_YAW 0.7f
 
 
 
@@ -97,13 +97,13 @@
 #define HEADLESSMODE CH_OFF
 
 // rates / expert mode
-#define RATES CH_EXPERT
+#define RATES CH_OFF
 
 // level / acro mode switch
 #define LEVELMODE CH_AUX1
 
 // channel to initiate automatic flip
-#define STARTFLIP CH_FLIP
+#define STARTFLIP CH_OFF
 
 // leds on / off channel
 #define LEDS_ON CH_ON
@@ -120,11 +120,11 @@
 
 // Airmode keeps the PID loop stabilizing the quads orientation even at zero throttle.
 // To stop the motors on ground a switch on the remote control is necessary.
-//#define AIRMODE_HOLD_SWITCH CH_INV // DEVO_CHAN_5
+#define AIRMODE_HOLD_SWITCH CH_FLIP // DEVO_CHAN_5
 
 
 // aux1 channel starts on if this is defined, otherwise off.
-#define AUX1_START_ON
+//#define AUX1_START_ON
 //#define AUX4_START_ON
 
 // use yaw/pitch instead of roll/pitch for gestures
@@ -170,7 +170,7 @@
 #define VDROP_FACTOR 0.70f
 
 // determine VDROP_FACTOR automatically in-flight, set factor ignored
-//#define AUTO_VDROP_FACTOR
+#define AUTO_VDROP_FACTOR
 
 // voltage hysteresys
 // in volts
@@ -215,7 +215,7 @@
 //#define PWM_32KHZ
 
 // failsafe time in uS
-#define FAILSAFETIME 1000000  // one second
+#define FAILSAFETIME 250000  // one second
 
 
 // uncomment to enable buzzer
